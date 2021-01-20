@@ -1,0 +1,48 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main/main.png</file>
+        <file>main/vehicle1.png</file>
+        <file>main/vehicle2.png</file>
+        <file>main/vehicle3.png</file>
+        <file>main/vehicle4.png</file>
+        <file>main/music.png</file>
+        <file>main/video.png</file>
+        <file>main/weather.png</file>
+        <file>main/map.png</file>
+        <file>main/m1.png</file>
+    </qresource>
+    <qresource prefix="/new/prefix1">
+        <file>weather/cloudy.png</file>
+        <file>weather/rainy.png</file>
+        <file>weather/sandfly.png</file>
+        <file>weather/sunny.png</file>
+        <file>weather/wind.png</file>
+        <file>weather/xiaoyu.png</file>
+        <file>weather/yintian.png</file>
+        <file>weather/mai.png</file>
+        <file>weather/wea1.png</file>
+        <file>weather/wea3.png</file>
+        <file>weather/wea2.png</file>
+    </qresource>
+    <qresource prefix="/video">
+        <file>video/addfile.png</file>
+        <file>video/del.png</file>
+        <file>video/next.png</file>
+        <file>video/play.png</file>
+        <file>video/stop.png</file>
+        <file>video/volume.png</file>
+        <file>video/prev.png</file>
+        <file>video/quit.png</file>
+    </qresource>
+    <qresource prefix="/music">
+        <file>music/next.png</file>
+        <file>music/prev.png</file>
+        <file>music/volume.png</file>
+        <file>music/lrc.png</file>
+        <file>music/main.png</file>
+        <file>music/play.png</file>
+        <file>music/stop.png</file>
+        <file>music/add.png</file>
+        <file>music/del.png</file>
+    </qresource>
+</RCC>

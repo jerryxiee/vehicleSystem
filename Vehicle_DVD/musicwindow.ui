@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MusicWindow</class>
+ <widget class="QMainWindow" name="MusicWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{background-image: url(:/main/m1.png);}
+
+
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QCommandLinkButton" name="commandLinkButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-1</y>
+      <width>60</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="pic/pic.qrc">
+      <normaloff>:/music/music/main.png</normaloff>:/music/music/main.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>50</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listWidget">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>50</y>
+      <width>131</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;</string>
+    </property>
+   </widget>
+   <widget class="QCommandLinkButton" name="addfiles">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>430</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="pic/pic.qrc">
+      <normaloff>:/music/music/add.png</normaloff>:/music/music/add.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QCommandLinkButton" name="del">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>430</y>
+      <width>41</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="pic/pic.qrc">
+      <normaloff>:/music/music/del.png</normaloff>:/music/music/del.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QCommandLinkButton" name="volume">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>430</y>
+      <width>50</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="pic/pic.qrc">
+      <normaloff>:/music/music/volume.png</normaloff>:/music/music/volume.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="mp3name">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>241</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>歌名</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="album">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>专辑</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="singer">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>251</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>歌手</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QSlider" name="vol_change">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>450</y>
+      <width>160</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#centralWidget{
+       border-style:solid;
+	   background: transparent;
+	   background-color:#0066CC;
+	   
+}
+ 
+QSlider#vol_change::groove:horizontal {  
+border: 1px solid #4A708B;  
+background: #575757;
+height: 5px;  
+border-radius: 1px;  
+padding-left:-1px;  
+padding-right:-1px;  
+}  
+  
+QSlider#vol_change::sub-page:horizontal {  
+background: qlineargradient(x1:0, y1:0, x2:0, y2:1,   
+    stop:0 #B1B1B1, stop:1 #c4c4c4);  
+background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,  
+    stop: 0 #5DCCFF, stop: 1 #1874CD);  
+border: 1px solid #4A708B;  
+height: 10px;  
+border-radius: 2px;  
+}  
+  
+QSlider#vol_change::add-page:horizontal {  
+background: #575757;  
+border: 0px solid #777;  
+height: 10px;  
+border-radius: 2px;  
+}  
+  
+QSlider#vol_change::handle:horizontal   
+{  
+    background: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5,   
+    stop:0.6 #45ADED, stop:0.778409 rgba(255, 255, 255, 255));  
+  
+    width: 11px;  
+    margin-top: -3px;  
+    margin-bottom: -3px;  
+    border-radius: 5px;  
+}  
+  
+QSlider#vol_change::handle:horizontal:hover {  
+    background: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0.6 #2A8BDA,   
+    stop:0.778409 rgba(255, 255, 255, 255));  
+  
+    width: 11px;  
+    margin-top: -3px;  
+    margin-bottom: -3px;  
+    border-radius: 5px;  
+}  
+  
+QSlider#vol_change::sub-page:horizontal:disabled {  
+background: #00009C;  
+border-color: #999;  
+}  
+  
+QSlider#vol_change::add-page:horizontal:disabled {  
+background: #eee;  
+border-color: #999;  
+}  
+  
+QSlider#vol_change::handle:horizontal:disabled {  
+background: #eee;  
+border: 1px solid #aaa;  
+border-radius: 4px;  
+}  </string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="lrc_change">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>410</y>
+      <width>371</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#centralWidget{
+       border-style:solid;
+	   background: transparent;
+	   background-color:#0066CC;
+	   
+}
+ 
+QSlider#lrc_change::groove:horizontal {  
+border: 1px solid #4A708B;  
+background: #575757;
+height: 5px;  
+border-radius: 1px;  
+padding-left:-1px;  
+padding-right:-1px;  
+}  
+  
+QSlider#lrc_change::sub-page:horizontal {  
+background: qlineargradient(x1:0, y1:0, x2:0, y2:1,   
+    stop:0 #B1B1B1, stop:1 #c4c4c4);  
+background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,  
+    stop: 0 #5DCCFF, stop: 1 #1874CD);  
+border: 1px solid #4A708B;  
+height: 10px;  
+border-radius: 2px;  
+}  
+  
+QSlider#lrc_change::add-page:horizontal {  
+background: #575757;  
+border: 0px solid #777;  
+height: 10px;  
+border-radius: 2px;  
+}  
+  
+QSlider#lrc_change::handle:horizontal   
+{  
+    background: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5,   
+    stop:0.6 #45ADED, stop:0.778409 rgba(255, 255, 255, 255));  
+  
+    width: 11px;  
+    margin-top: -3px;  
+    margin-bottom: -3px;  
+    border-radius: 5px;  
+}  
+  
+QSlider#lrc_change::handle:horizontal:hover {  
+    background: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0.6 #2A8BDA,   
+    stop:0.778409 rgba(255, 255, 255, 255));  
+  
+    width: 11px;  
+    margin-top: -3px;  
+    margin-bottom: -3px;  
+    border-radius: 5px;  
+}  
+  
+QSlider#lrc_change::sub-page:horizontal:disabled {  
+background: #00009C;  
+border-color: #999;  
+}  
+  
+QSlider#lrc_change::add-page:horizontal:disabled {  
+background: #eee;  
+border-color: #999;  
+}  
+  
+QSlider#lrc_change::handle:horizontal:disabled {  
+background: #eee;  
+border: 1px solid #aaa;  
+border-radius: 4px;  
+}  </string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pos">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>430</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>00:00:00</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="len">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>430</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>00:00:00</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>10</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>播放列表</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="lrc">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>10</y>
+      <width>371</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:transparent;</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>330</y>
+      <width>280</width>
+      <height>72</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QCommandLinkButton" name="prev">
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="pic/pic.qrc">
+         <normaloff>:/music/music/prev.png</normaloff>:/music/music/prev.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QCommandLinkButton" name="play">
+       <property name="maximumSize">
+        <size>
+         <width>70</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="pic/pic.qrc">
+         <normaloff>:/music/music/play.png</normaloff>:/music/music/play.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QCommandLinkButton" name="next">
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="pic/pic.qrc">
+         <normaloff>:/music/music/next.png</normaloff>:/music/music/next.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="pic/pic.qrc"/>
+ </resources>
+ <connections/>
+</ui>
